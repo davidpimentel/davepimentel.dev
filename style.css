@@ -1,0 +1,231 @@
+/* || Variables */
+
+:root {
+  /* color palette */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #8A92AD;
+  --color-gray-opaque: #8A92AD19;
+  --color-navy: #0E152E;
+  --color-yellow: #DFAB48;
+  --color-green: #8DF5D6;
+  --color-transparent: #FFFFFF00;
+
+  /* fonts */
+  --font-primary: 'DM Sans';
+  --font-secondary: 'Roboto Mono';
+
+  /* breakpoints */
+  --breakpoint-small: 576px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+/* || Global styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% of 16px browser font size is 10px, easier for REM scaling */
+  font-size: 62.5%;
+}
+
+body {
+  /* 16px */
+  font-size: 1.6rem;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* || Components */
+
+.link {
+  font-family: var(--font-secondary);
+  color: var(--color-green);
+  font-weight: 500;
+  font-size: 1.4rem;
+  border: 1px solid var(--color-green);
+  border-radius: 2px;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  width: auto;
+  text-align: center;
+  max-width: 350px;
+}
+
+.main {
+  max-width: 1300px;
+  margin: 0px auto 0px auto;
+  padding: 0px 30px 0px 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray);
+  padding: 20px 0px 20px 0px;
+}
+
+.header__logo {
+  flex: 0 0 auto;
+  margin: 20px 20px 20px 0px;
+}
+
+.header__item--right {
+  flex: 0 0 auto;
+}
+
+.header__item--left {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.header__subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.header__link {
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: var(--font-secondary);
+}
+
+.section {
+  display: flex;
+  align-items: stretch;
+  gap: 72px;
+  justify-content: space-evenly;
+  border-top: none;
+  margin-top: 40px;
+}
+
+.section--wrap {
+  flex-wrap: wrap;
+}
+
+.section--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.section__item {
+  flex: 0 1 500px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.section__item-column {
+  flex-direction: column;
+}
+
+.section-description {
+  align-items: center;
+}
+
+.section-image {
+  background-color: var(--color-green);
+  clip-path: circle(50%);
+}
+
+.section-image img {
+  clip-path: circle(50%);
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+.section-description__heading {
+  font-family: var(--font-secondary);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--color-green);
+}
+
+.section-description__title {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.section-description__body {
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 64px;
+  color: var(--color-gray);
+}
+
+.section-list-item {
+  width: 100%;
+  background: var(--color-gray-opaque);
+  border-radius: 2px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.section-list-item__title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  letter-spacing: 0.1rem;
+}
+
+.section-list-item__list {
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-gray);
+  padding-inline-start: 16px;
+}
+
+.section-grid {
+  display: grid;
+  gap: 20px;
+  flex: 1 1 auto;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.section-grid__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gray-opaque);
+  padding: 80px 0px;
+}
+
+.section-grid__item img {
+  width: 60%;
+  height: auto;
+}
+
+footer {
+  border-top: 1px solid var(--color-gray);
+  margin-top: 40px;
+}
+
+footer .footer__contents {
+  padding: 30px;
+}

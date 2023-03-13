@@ -164,8 +164,14 @@ body {
   color: var(--color-green);
 }
 
+.section-description__supertitle {
+  color: var(--color-gray);
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+}
+
 .section-description__title {
-  font-size: 2.8rem;
+  font-size: 4.0rem;
   margin-bottom: 24px;
 }
 
@@ -198,6 +204,7 @@ body {
   font-weight: 400;
   color: var(--color-gray);
   padding-inline-start: 16px;
+  columns: 2;
 }
 
 .section-grid {

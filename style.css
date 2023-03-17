@@ -137,6 +137,10 @@ body {
   margin-top: min(10vw, 100px);
 }
 
+.section:last-of-type {
+  margin-bottom: min(10vw, 100px);
+}
+
 .section--wrap {
   flex-wrap: wrap;
 }
@@ -241,8 +245,9 @@ body {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   border-top: 1px solid var(--color-gray);
-  margin-top: 40px;
   padding: 40px 0px 40px 0px;
   align-items: center;
 }
@@ -300,4 +305,5 @@ body {
   .section-list-item__list {
     columns: 1;
   }
+
 }
